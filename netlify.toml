@@ -1,0 +1,23 @@
+# netlify.toml
+
+# This section defines the build settings for your site.
+[build]
+  # This is the command Netlify will run to build your site.
+  # 'npm run build' is the standard command for Vite projects.
+  command = "npm run build"
+  
+  # This is the directory that contains the built site.
+  # Vite places the output in the 'dist' folder by default.
+  publish = "dist"
+
+# This section sets up redirect rules. It's crucial for Single-Page Applications (SPAs).
+[[redirects]]
+  # The source path '*' matches any URL that hasn't been matched by a previous rule.
+  from = "/*"
+  
+  # The destination path is the root of your site.
+  to = "/index.html"
+  
+  # The status code 200 means 'OK'. This tells the browser that the request was successful
+  # and serves the index.html file, allowing your React router to handle the URL.
+  status = 200
