@@ -7,8 +7,8 @@
   command = "npm run build"
   
   # This is the directory that contains the built site.
-  # Vite places the output in the 'dist' folder by default.
-  publish = "dist"
+  # Vite places the output in the 'build' folder for this project.
+  publish = "build"
 
 # This section sets up redirect rules. It's crucial for Single-Page Applications (SPAs).
 [[redirects]]
